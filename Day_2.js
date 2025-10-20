@@ -4,30 +4,31 @@
  */
 function createFrame(names) {
     let maxLength = 0;
-    let mark = "****";
+    let mark = '****';
+    let frame = [];
 
     for (const name of names) {
-        if (name.length > maxLength){
-            maxLength = name.length
+        if (name.length > maxLength) {
+            maxLength = name.length;
         }
     }
 
     for (let i = 0; i < maxLength; i++) {
-        mark += "*"
+        mark += '*';
     }
 
-    console.log(mark);
+    frame.push(mark);
     for (const name of names) {
-        console.log("* " +name.padEnd(maxLength, " ")+ " *");
+        frame.push('* ' + name.padEnd(maxLength, ' ') + ' *');
     }
-    console.log(mark);
+    frame.push(mark);
 
-    return '*'
+    return frame.join('\n');
 }
 
 
 /*   -- PRUEBAS --   */
-createFrame(['midu', 'madeval', 'educalvolpz'])
+console.log(createFrame(['midu', 'madeval', 'educalvolpz']))
 
 /*
 ***************
@@ -37,14 +38,14 @@ createFrame(['midu', 'madeval', 'educalvolpz'])
 ***************
 */
 
-createFrame(['midu'])
+console.log(createFrame(['midu']))
 
 /*
 ********
 * midu *
 ********
 */
-createFrame(['a', 'bb', 'ccc'])
+console.log(createFrame(['a', 'bb', 'ccc']))
 
 /*
 *******

@@ -46,6 +46,7 @@ function drawTable(data) {
 }
 
 
+/*   -- PRUEBAS --   */
 console.log(drawTable([
     { name: 'Alice', city: 'London' },
     { name: 'Bob', city: 'Paris' },
